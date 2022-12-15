@@ -1,0 +1,104 @@
+footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0px 150px;
+  color: white;
+
+}
+
+.about {
+  top: 0;
+  position: relative;
+  width: 400px;
+  text-align: justify;
+}
+
+.about-title {
+  font-weight: bolder;
+}
+
+.about-text {
+  font-weight: lighter;
+}
+
+.line {
+  margin: 0;
+  color: #FFCE2E;
+  font-weight: bolder;
+}
+
+.comment {
+  position: relative;
+  display: flex;
+  width: 450px;
+  text-align: justify;
+  flex-direction: column;
+  margin-top: 13px;
+}
+
+.comment-text {
+  display: flex;
+}
+
+.comment-field {
+  display: flex;
+  left: 78px;
+  position: relative;
+
+}
+
+img{
+  position: relative;
+  width: 60px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 5px 5px
+}
+
+.quotes {
+  color: #FFCE2E;
+  width: 357px;
+  font-size: 35px;
+}
+
+
+.icon{
+  font-size: 22px;
+  display: inline;
+  margin-top: 8px;
+  align-self: center;
+}
+
+input {
+  height: 22px;
+  width: 347px;
+  align-self: center;
+  margin-left: 5px;
+  font-size: 10px;
+  background-color: black;
+
+}
+
+.social-media{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 35px;
+  margin-top: 18px;
+  height: 130px;
+}
+
+.face {
+  color: black;
+  background-color: white;
+  border-left: 2.5px white solid;
+  border-right: 2.5px white solid;
+  border-bottom: 1.25px white solid;
+  border-top: 2px white solid;
+  border-radius: 5px;
+  font-size: 29px;
+  margin-top: 2px;
+}
+

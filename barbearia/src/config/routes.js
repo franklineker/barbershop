@@ -2,7 +2,7 @@
 
 module.exports = app => {
 
-    
+
     app.route('/clients')
         .get(app.src.api.Client.getClients)
         .post(app.src.api.Client.setClient)
@@ -21,7 +21,7 @@ module.exports = app => {
         .get(app.src.api.Barber.getBarberByCPF)
         .put(app.src.api.Barber.updateBarber)
         .delete(app.src.api.Barber.deleteBarber)
-        
+
 
     app.route('/chairs')
         .get(app.src.api.Chair.getChairs)
@@ -44,7 +44,7 @@ module.exports = app => {
     app.route('/admin')
         .get(app.src.api.Admin.getAdmin)
         .post(app.src.api.Admin.setAdmin)
-    
+
     app.route('/admin/:id')
         .get(app.src.api.Admin.getAdminById)
         .put(app.src.api.Admin.updateAdmin)
@@ -58,7 +58,7 @@ module.exports = app => {
         .get(app.src.api.Report.getReportById)
         .put(app.src.api.Report.updateReport)
         .delete(app.src.api.Report.deleteReport)
-    
+
     app.route('/contact/emails')
         .get(app.src.api.Contact.getEmails)
         .post(app.src.api.Contact.sendEmail)
@@ -77,7 +77,7 @@ module.exports = app => {
         .get(app.src.api.Appointment.getAppointments)
         .post(app.src.api.Appointment.setAppointment)
 
-    app.route('/appointment/:id') 
+    app.route('/appointment/:id')
         .get(app.src.api.Appointment.getAppointmentById)
         .put(app.src.api.Appointment.updateAppointment)
         .delete(app.src.api.Appointment.deleteAppointment)

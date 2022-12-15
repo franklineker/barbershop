@@ -1,0 +1,43 @@
+.calendar-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  left: 150px;
+  top: 100px;
+}
+
+mat-card {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 8px;
+}
+
+.mat-card {
+  width: 300px;
+}
+
+::ng-deep span {
+  color: white;
+}
+
+::ng-deep .mat-calendar-body-selected {
+  background-color: #FFCE2E;
+  color: black !important;
+}
+
+::ng-deep .mat-calendar-body-cell-content {
+  color: white;
+}
+
+::ng-deep .mat-calendar-body-cell-content:hover {
+  color: black;
+}
+
+::ng-deep .mat-calendar-body-label {
+  color: white;
+  opacity: 0;
+}
+
+::ng-deep .mat-focus-indicator:hover {
+  background-color: #FFCE2E  !important;
+}

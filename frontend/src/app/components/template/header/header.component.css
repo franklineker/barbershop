@@ -1,0 +1,54 @@
+
+
+.header {
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+  max-height: 60px;
+  overflow: hidden;
+  margin: 0px 150px;
+  justify-content: space-between;
+
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: inherit;
+  margin: 0px 40px;
+
+}
+
+
+.user-icon {
+  color: white;
+  font-size: 35px;
+  align-self: center;
+}
+
+.register {
+  display: flex;
+  font-size: 8px;
+  max-width: 90px;
+  align-content: center;
+}
+
+.register a {
+  color: white;
+}
+
+.header .logo-image {
+  max-height: 80px;
+}
