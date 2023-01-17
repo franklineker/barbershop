@@ -1,3 +1,22 @@
-<main class="content">
+<main class="wrap">
+      <nav visibility="false">
+        <ul>
+          <a routerLink="/agenda" (click)="toggleMenu()">
+            <li>Agenda</li>
+          </a>
+          <a routerLink="/barbers" (click)="toggleMenu()">
+            <li>Barbeiros</li>
+          </a>
+          <a routerLink="/orders" (click)="toggleMenu()">
+            <li>Cortes</li>
+          </a>
+          <a routerLink="/contact" (click)="toggleMenu()">
+            <li>Contato</li>
+          </a>
+          <a routerLink="/address" (click)="toggleMenu()">
+            <li>Endereço</li>
+          </a>
+        </ul>
+      </nav>
   <router-outlet></router-outlet>
 </main>

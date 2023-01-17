@@ -1,35 +1,47 @@
 <footer>
-  <div class="about">
-    <span class="line">__</span>
-    <p class="about-title">
-      Sobre a barbearia
-    <p class="about-text">
-      Aqui tem uma breve descrição da barbearia, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
-      ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos.
-      Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
-    </p>
-  </div>
-  <div class="comment">
-    <div class="comment-text">
-      <img alt="crypto" src="assets/images/image-placeholder.png">
-      <i class="fa-sharp fa-solid fa-quote-left quotes"></i>
-      <span>
-        Aqui tem um comentario sobre a barbearia, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-      libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia
-      nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque...
-      </span>
+  <div class="wrap">
+    <div class="about">
+      <span class="my-yellow line">__</span>
+      <p class="about-title">
+        Sobre a barbearia
+      <p>
+        Aqui tem uma breve descrição da barbearia, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
+        ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+        himenaeos.
+        Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
+      </p>
     </div>
-    <div class="form-group comment-field">
-      <label for="comment-text" class="icon">
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-      </label>
-      <input type="text" class="form-control" id="comment-text" placeholder="Digite seu comentário...">
+    <div class="comment">
+      <div class="d-flex">
+        <img alt="crypto" src="assets/images/image-placeholder.png">
+        <i class="fa-sharp fa-solid fa-quote-left" id="quotes"></i>
+        <p class="text-justify">
+          Aqui tem um comentario sobre a barbearia, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputatelibero et velit interdum, ac aliquet odio mattis. Classurpis condimentum lobortis. Ut commodo efficitur neque...
+          a barbearia, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+          libero et velit interdum, ac aliquet odio matt
+        </p>
+      </div>
+      <form>
+        <div class="d-flex">
+          <label for="comment-text" class="label-icon">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          </label>
+          <textarea class="comment-text-field bg-dark text-white"></textarea>
+        </div>
+        <input type="submit" value="Enviar" class="send-button mt-1">
+      </form>
     </div>
-  </div>
-  <div class="social-media">
-    <i class="fa-brands fa-instagram insta"></i>
-    <i class="fa-brands fa-whatsapp whatsapp"></i>
-    <i class="fa-brands fa-square-facebook face"></i>
+    <div class="social-media">
+      <a href="https://www.instagram.com/" class="text-white icon-margin" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.whatsapp.com/?lang=pt_br" class="text-white icon-margin" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://m.facebook.com/" class="text-white icon-margin" target="_blank">
+        <i class="fa-brands fa-square-facebook face-icon"></i>
+      </a>
+    </div>
   </div>
 </footer>

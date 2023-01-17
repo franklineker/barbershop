@@ -1,34 +1,41 @@
-<header class="header">
-  <span class="logo">
-    <a routerLink="">
-      <img class="logo-image" src="assets/images/logo.png" alt="logo">
-    </a>
-  </span>
-  <aside>
-    <ul class="menu">
-      <a routerLink="/agenda">
-        <li>Agenda</li>
+<header>
+  <div class="row">
+    <div class="menu-icon" *ngIf="showMenuIcon" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars text-white"></i>
+    </div>
+    <div class="d-flex" id="logo-wrap">
+      <a routerLink="/">
+        <img class="logo" src="assets/images/logo.png" alt="logo">
       </a>
-      <a routerLink="/barbers">
-        <li>Barbeiros</li>
+    </div>
+    <div class="responsive-menu">
+      <nav id="menu-bar">
+        <ul>
+          <a routerLink="/agenda" class="text-white">
+            <li class="py-4 px-2">Agenda</li>
+          </a>
+          <a routerLink="/barbers" class="text-white">
+            <li class="py-4 px-2">Barbeiros</li>
+          </a>
+          <a routerLink="/orders" class="text-white">
+            <li class="py-4 px-2">Cortes</li>
+          </a>
+          <a routerLink="/contact" class="text-white">
+            <li class="py-4 px-2">Contato</li>
+          </a>
+          <a routerLink="/address" class="text-white">
+            <li class="py-4 px-2">Endereço</li>
+          </a>
+        </ul>
+      </nav>
+    </div>
+    <div class="register">
+      <a routerLink="/register" class="register-link">
+        Olá, Visitante! <br> Registre-se.
       </a>
-      <a routerLink="/orders">
-        <li>Cortes</li>
+      <a routerLink="/profile" class="text-white">
+        <i class="material-icons" id="user-icon">account_circle</i>
       </a>
-      <a routerLink="/contact">
-        <li>Contato</li>
-      </a>
-      <a routerLink="/address">
-        <li>Endereço</li>
-      </a>
-    </ul>
-  </aside>
-  <span class="register">
-    <a routerLink="/register">
-      Olá, Visitante! Registre-se.
-    </a>
-    <a routerLink="/profile">
-      <i class="material-icons user-icon">account_circle</i>
-    </a>
-  </span>
+    </div>
+  </div>
 </header>

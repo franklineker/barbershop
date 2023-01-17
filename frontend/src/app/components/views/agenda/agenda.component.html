@@ -1,5 +1,79 @@
-<div class="calendar-container">
-  <mat-card class="mat-card">
-      <mat-calendar [(selected)]="selected"></mat-calendar>
-  </mat-card>
+<div class="agenda">
+  <div class="schedule-wrapper">
+    <div class="calendar-wrapper">
+      <mat-card class="mat-card">
+        <mat-calendar [(selected)]="dateSelected"></mat-calendar>
+      </mat-card>
+    </div>
+    <div class="time-wrapper">
+      <mat-form-field appearance="fill" class="datepicker-wrapper">
+        <mat-label>Escolha uma data</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="row">
+        <button id="8000" (click)="hourButtonSelected('8000')">8:00</button>
+        <button id="8030" (click)="hourButtonSelected('8030')">8:30</button>
+        <button id="9000" (click)="hourButtonSelected('9000')">9:00</button>
+        <button id="9030" (click)="hourButtonSelected('9030')">9:30</button>
+      </div>
+      <div class="row">
+        <button id="1000" (click)="hourButtonSelected('1000')">10:00</button>
+        <button id="1030" (click)="hourButtonSelected('1030')">10:30</button>
+        <button id="1100" (click)="hourButtonSelected('1100')">11:00</button>
+        <button id="1130" (click)="hourButtonSelected('1130')">11:30</button>
+      </div>
+      <div class="row">
+        <button id="1200" (click)="hourButtonSelected('1200')">12:00</button>
+        <button id="1230" (click)="hourButtonSelected('1230')">12:30</button>
+        <button id="1300" (click)="hourButtonSelected('1300')">13:00</button>
+        <button id="1330" (click)="hourButtonSelected('1330')">13:30</button>
+      </div>
+      <div class="row">
+        <button id="1400" (click)="hourButtonSelected('1400')">14:00</button>
+        <button id="1430" (click)="hourButtonSelected('1430')">14:30</button>
+        <button id="1500" (click)="hourButtonSelected('1500')">15:00</button>
+        <button id="1530" (click)="hourButtonSelected('1530')">15:30</button>
+      </div>
+      <div class="row">
+        <button id="1600" (click)="hourButtonSelected('1600')">16:00</button>
+        <button id="1630" (click)="hourButtonSelected('1630')">16:30</button>
+        <button id="1700" (click)="hourButtonSelected('1700')">17:00</button>
+        <button id="1730" (click)="hourButtonSelected('1730')">17:30</button>
+      </div>
+      <div class="row">
+        <button id="1800" (click)="hourButtonSelected('1800')">18:00</button>
+        <button id="1830" (click)="hourButtonSelected('1830')">18:30</button>
+        <button id="1900" (click)="hourButtonSelected('1900')">19:00</button>
+        <button id="1930" (click)="hourButtonSelected('1930')">19:30</button>
+      </div>
+      <a href="/">
+        <button class="book" (click)="bookAppointment()" >Agendar</button>
+      </a>
+    </div>
+    <div class="images-wrapper">
+      <div class="barber">
+        <img src="../../../../assets/images/image-placeholder.png" alt="orderImage">
+        <label for="berbers">Barbeiro:</label>
+        <select name="barbers" id="berbers">
+          <option value="volvo">Fulano</option>
+          <option value="saab">Ciclano</option>
+          <option value="mercedes">Beltrano</option>
+          <option value="audi">Indiano</option>
+        </select>
+      </div>
+      <div class="order">
+        <img src="../../../../assets/images/haircut-model.jpg" alt="orderImage">
+        <label for="berbers">Corte:</label>
+        <select name="orders" id="oer">
+          <option value="volvo">Moicano</option>
+          <option value="saab">Cesariano</option>
+          <option value="mercedes">Juliano</option>
+          <option value="audi">Adriano</option>
+        </select>
+        <span class="price">R$ 0,00</span>
+      </div>
+    </div>
+  </div>
 </div>

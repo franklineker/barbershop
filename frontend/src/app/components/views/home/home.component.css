@@ -1,20 +1,21 @@
+
 .home {
   display: flex;
   color: white;
-  margin: 0 150px;
+  padding: 0 15px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .bem-vindo {
   display: flex;
   flex-direction: column;
   width: 400px;
-  max-height: 625px;
-  margin-top: 100px;
-  flex-wrap: wrap;
-
+  height: 300px;
 }
 
-.p1 {
+h1 {
   font-size: 36px;
   margin-bottom: 50px;
 }
@@ -26,16 +27,48 @@
 }
 
 img {
-  position: absolute;
-  margin-top: 80px;
-  right: 150px;
+  display: none;
+  height: 350px;
+  padding-left: 30px;
 }
 
 button {
   position: relative;
-  margin-top: 80px;
-  align-self: stretch;
-  width: 396px;
+  justify-self: center;
+  width: 100%;
   height: 56.21px;
+  font-size: 16px;
   font-weight: bolder;
+  border-radius: 10px;
+
+}
+
+#button {
+  margin-top: 50px;
+}
+
+@media (min-width: 576px) {
+
+  .home {
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  img {
+    display: inline-block;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .home {
+    justify-content: space-between;
+    padding: 0 150px;
+  }
+
+  img {
+    display: inline-block;
+  }
+
 }

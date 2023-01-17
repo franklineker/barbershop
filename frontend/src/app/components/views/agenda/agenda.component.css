@@ -1,28 +1,226 @@
-.calendar-container {
+.agenda {
+  width: 100%;
+}
+
+.schedule-wrapper {
+  display: flex;
+  height: 100%;
+  padding: 0 15px;
+  position: relative;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.book {
+  position: relative;
+  background-color: #FFCE2E;
+  border-radius: 10px;
+  width: 189px;
+  height: 58px;
+  align-self: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 550;
+
+}
+
+a {
+  align-self: center;
+}
+
+.calendar-wrapper {
+  position: relative;
+  display: none;
+}
+
+.time-wrapper {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 15px;
+  margin-right: 10px;
+}
+
+.time-wrapper .row {
+  margin: 0px;
+  justify-content: space-between;
+
+}
+
+.time-wrapper .row button {
   display: flex;
   position: relative;
+  background-color: #FFCE2E;
+  color: black;
+  width: 58px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.time-wrapper .row button[is-selected='true'] {
+  background-color: black;
+  color: rgb(157, 155, 155);
+  border: 2px solid #FFCE2E;
+}
+
+.images-wrapper {
+  display: flex;
+  max-height: 386px;
   flex-direction: column;
-  left: 150px;
-  top: 100px;
+  font-size: 12px;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+}
+
+.images-wrapper img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+}
+
+.images-wrapper label {
+  margin: 0;
+  text-align: start;
+  padding-left: 3px;
+}
+
+.barber {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  line-height: 14px;
+
+}
+
+.barber select {
+  background-color: #FFCE2E;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 14px;
+  text-align: center;
+
+}
+
+span.price {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.order select {
+  background-color: #FFCE2E;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.order .price {
+  background-color: #FFCE2E;
+  border-radius: 10px;
+  font-size: 12px;
+  color: black;
+  width: 65px;
 }
 
 mat-card {
+  position: relative;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   border-radius: 8px;
+  height: 400px;
+
 }
 
 .mat-card {
-  width: 300px;
+  width: 350px;
+  margin: 0;
+}
+
+button:focus, select:focus {
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+
+::ng-deep .cdk-focused {
+  outline: thin dotted !important;
+  outline: 0px auto -webkit-focus-ring-color !important;
+  outline-offset: 0px !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+::ng-deep .ng-tns-c93-0 {
+  border: none !important;
+}
+
+::ng-deep .mat-datepicker-input {
+  color: white !important;
+}
+
+::ng-deep .mat-datepicker-content {
+  background-color: black;
+  color: white;
+}
+
+::ng-deep .mdc-icon-button {
+  color: white !important;
+  border: none !important;
+}
+
+::ng-deep mat-label {
+  color: white !important;
+
 }
 
 ::ng-deep span {
   color: white;
 }
 
+::ng-deep button.mat-calendar-previous-button,
+::ng-deep button.mat-calendar-next-button {
+  background-color: black;
+  color: white !important;
+}
+
+::ng-deep .mat-calendar-body-today {
+  background-color: #FFCE2E !important;
+  color: black !important;
+}
+
 ::ng-deep .mat-calendar-body-selected {
   background-color: #FFCE2E;
   color: black !important;
+}
+::ng-deep .mat-calendar-body-active {
+  outline: thin dotted !important;
+  outline: 0px auto -webkit-focus-ring-color !important;
+  outline-offset: 0px !important;
 }
 
 ::ng-deep .mat-calendar-body-cell-content {
@@ -39,5 +237,79 @@ mat-card {
 }
 
 ::ng-deep .mat-focus-indicator:hover {
-  background-color: #FFCE2E  !important;
+  background-color: #FFCE2E !important;
+}
+
+button {
+  border: none;
+}
+@media (min-width: 576px) {
+
+  .schedule-wrapper {
+    display: grid;
+    padding: 30px 35px 35px;
+    grid-template-areas:
+      'calendar-wrapper time-wrapper'
+      'images-wrapper images-wrapper';
+  }
+
+  .calendar-wrapper {
+    display: inline-block;
+    padding-top: 15px;
+    grid-area: calendar-wrapper;
+  }
+
+  .time-wrapper {
+    grid-area: time-wrapper;
+    height: inherit;
+    margin: 0;
+  }
+
+  .images-wrapper {
+    grid-area: images-wrapper;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .order {
+    margin-left: 50px;
+  }
+
+  mat-form-field {
+    display: none;
+  }
+
+  .row button {
+    margin-left: 20px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .schedule-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 100px 100px;
+  }
+
+  .images-wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .order {
+    margin-left: 0px;
+  }
+
+  .row button {
+    margin: 0 20px 20px;
+    margin-top: 0;
+    justify-content: start;
+  }
+
+  .book {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 }

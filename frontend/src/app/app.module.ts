@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatCardModule } from '@angular/material/card'
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core'
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { ProfileComponent } from './components/views/profile/profile.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     ContactComponent,
     AddressComponent,
     RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     MatInputModule,
     MatCardModule,
     MatNativeDateModule,
-    MatRippleModule,
+    MatRippleModule
 
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
